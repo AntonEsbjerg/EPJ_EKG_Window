@@ -1,0 +1,27 @@
+﻿<Project Sdk="Microsoft.NET.Sdk.WindowsDesktop">
+
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+    <UseWPF>true</UseWPF>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="App_logo.png" />
+    <None Remove="CapsLock_icon.png" />
+    <None Remove="help_icon.png" />
+    <None Remove="Red_Cross_icon.svg.png" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Logic_Tier\Logic_Tier.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Resource Include="App_logo.png" />
+    <Resource Include="CapsLock_icon.png" />
+    <Resource Include="help_icon.png" />
+    <Resource Include="Red_Cross_icon.svg.png" />
+  </ItemGroup>
+
+</Project>
