@@ -26,13 +26,14 @@ namespace Presentation_Tier
          InitializeComponent();
          this.logicRef = logicRef;
          this.mainWRef = mainWRef;
+            this.PreviewKeyDown += new KeyEventHandler(HandleEsc);
 
-      }
+        }
         private void HandleEsc(object sender, KeyEventArgs e)
         {
             if (e.Key == Key.Escape)
             {
-                LoginW.Close();
+                this.Close();
             }
         }
         private void login_Button_Click(object sender, RoutedEventArgs e)
