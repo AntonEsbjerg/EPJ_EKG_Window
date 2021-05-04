@@ -13,6 +13,7 @@ using System.Windows.Media.Animation;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using System.ComponentModel;
 using Logic_Tier;
 
 namespace Presentation_Tier
@@ -32,7 +33,8 @@ namespace Presentation_Tier
          logicObj = new Logic();
          loginW = new LoginWindow(this, logicObj);
          InitializeComponent();
-      }
+         this.PreviewKeyDown += new KeyEventHandler(HandleEsc);
+        }
 
       private void Window_Loaded(object sender, RoutedEventArgs e)
       {
@@ -54,8 +56,15 @@ namespace Presentation_Tier
          }
 
       }
-
-      public void Blinkingbutton(Button newECG_Button, int length, double repetition)
+        
+        private void HandleEsc(object sender, KeyEventArgs e)
+        {
+            if (e.Key == Key.Escape)
+            {
+                MainW.Close();
+            }
+        }
+        public void Blinkingbutton(Button newECG_Button, int length, double repetition)
       {
          DoubleAnimation opacityAnimation = new DoubleAnimation
          {
