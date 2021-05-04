@@ -105,16 +105,23 @@ namespace Presentation_Tier
 
       private void newECG_Button_Click(object sender, RoutedEventArgs e)
       {
-        
          Blinkingbutton(newECG_Button, 500, 3.0);
-
          ecgw = new ECG_Window(logicObj, socsecNB);
          this.Hide();
          ecgw.ShowDialog();
          this.Show();
-
-
-
       }
-   }
+
+        private void logout_BT_Click(object sender, RoutedEventArgs e)
+        {
+            this.Close();
+        }
+        private void valgtEKG_BT_Click(object sender, RoutedEventArgs e)
+        {
+            ecgw = new ECG_Window(logicObj, socsecNB);
+            this.Hide();
+            ecgw.ShowDialog();
+            this.Show();
+        }
+    }
 }
