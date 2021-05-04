@@ -61,12 +61,22 @@ namespace Presentation_Tier
 
       private void STEMI_Button_Click(object sender, RoutedEventArgs e)
       {
+         var result = MessageBox.Show("OBS. Du er ved at give diagnosen STEMI, ønsker du at forsætte?", "Advarelse", MessageBoxButton.YesNo, MessageBoxImage.Warning, MessageBoxResult.No);
 
+         if (result == MessageBoxResult.Yes)
+         {
+
+         }
       }
 
       private void NOSTEMI_Button_Click(object sender, RoutedEventArgs e)
       {
+         var result = MessageBox.Show("OBS. Du er ved at give diagnosen INGEN STEMI, ønsker du at forsætte?", "Advarelse", MessageBoxButton.YesNo, MessageBoxImage.Warning, MessageBoxResult.No);
 
+         if (result == MessageBoxResult.Yes)
+         {
+
+         }
       }
    }
 }

@@ -25,6 +25,8 @@ namespace Presentation_Tier
       public bool LoginOK { get; set; }
       private LoginWindow loginW;
       private Logic logicObj;
+      private ECG_Window ecgw;
+      private string socsecNB;
       public MainWindow()
       {
          logicObj = new Logic();
@@ -96,6 +98,13 @@ namespace Presentation_Tier
       {
         
          Blinkingbutton(newECG_Button, 500, 3.0);
+
+         ecgw = new ECG_Window(logicObj, socsecNB);
+         this.Hide();
+         ecgw.ShowDialog();
+         this.Show();
+
+
 
       }
    }
