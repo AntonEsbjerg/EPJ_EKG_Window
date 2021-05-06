@@ -41,7 +41,7 @@ namespace Presentation_Tier
 
       private void Window_Loaded(object sender, RoutedEventArgs e)
       {
-         socsec_TB.Text = SocSecNb;
+         cpr_Lb.Content = SocSecNb;
 
          // listerne til x og y værdieren fyldes med data:
 

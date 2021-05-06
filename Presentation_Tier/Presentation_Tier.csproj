@@ -10,6 +10,7 @@
     <None Remove="App_logo.png" />
     <None Remove="CapsLock_icon.png" />
     <None Remove="help_icon.png" />
+    <None Remove="Logudpil.png" />
     <None Remove="lyric_to_home.png" />
     <None Remove="Red_Cross_icon.svg.png" />
   </ItemGroup>
@@ -28,6 +29,7 @@
     <Resource Include="App_logo.png" />
     <Resource Include="CapsLock_icon.png" />
     <Resource Include="help_icon.png" />
+    <Resource Include="Logudpil.png" />
     <Resource Include="lyric_to_home.png" />
     <Resource Include="Red_Cross_icon.svg.png" />
   </ItemGroup>

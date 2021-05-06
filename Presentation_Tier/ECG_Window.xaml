@@ -6,39 +6,40 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Presentation_Tier"
         mc:Ignorable="d"
-        Title="ECG_Window" Height="450" Width="800" Icon="/App_logo.png" Loaded="Window_Loaded">
+        Title="ECG_Window" Height="1080" Width="1920" Icon="/App_logo.png" Loaded="Window_Loaded" WindowState="Maximized">
     <Grid>
         <Grid.ColumnDefinitions>
             <ColumnDefinition/>
         </Grid.ColumnDefinitions>
 
-        <Rectangle Margin="0,16,0,0" Fill="#FFD7EBF5" Height="62" VerticalAlignment="Top" HorizontalAlignment="Center" Width="780"/>
+        <Rectangle Margin="0,47,0,0" Fill="#FFD7EBF5" Height="120" VerticalAlignment="Top" HorizontalAlignment="Center" Width="1806"/>
 
-        <lvc:CartesianChart x:Name="ChartBS" Grid.Row="0" Margin="10,91,10,10" LegendLocation="Top" Background="White">
+        <lvc:CartesianChart x:Name="ChartBS" Grid.Row="0" Margin="10,175,10,10" LegendLocation="Top" Background="White" FontSize="30">
             <lvc:CartesianChart.Series>
                 <lvc:LineSeries x:Name="Bloodsugar_" Title="EKG-måling" Fill="Transparent" Values="{Binding YvaluesBloodsugar}"/>
             </lvc:CartesianChart.Series>
             <lvc:CartesianChart.AxisX>
-                <lvc:Axis Title="Tid [mS]" FontSize="14" LabelsRotation="-45" Labels="{Binding XvaluesBSDate}">
+                <lvc:Axis Title="Tid [mS]" FontSize="30" LabelsRotation="-45" Labels="{Binding XvaluesBSDate}">
                     <lvc:Axis.Separator>
                         <lvc:Separator IsEnabled="True" Step="1"/>
                     </lvc:Axis.Separator>
                 </lvc:Axis>
             </lvc:CartesianChart.AxisX>
             <lvc:CartesianChart.AxisY>
-                <lvc:Axis Title="Spænding [mV]" FontSize="14" MinValue="0" MaxValue="18" MinRange="1" />
+                <lvc:Axis Title="Spænding [mV]" FontSize="30" MinValue="0" MaxValue="18" MinRange="1" />
             </lvc:CartesianChart.AxisY>
         </lvc:CartesianChart>
-        <Label Content="CPR:" HorizontalAlignment="Left" Margin="35,34,0,0" VerticalAlignment="Top" FontWeight="Bold"/>
-        <Label Content="Hovedmenu:" Margin="627,33,0,0" FontSize="14" FontWeight="Normal" HorizontalAlignment="Left" Width="100" Height="31" VerticalAlignment="Top"/>
-        <Button x:Name="home_button" Cursor="Hand" Content="" Margin="732,33,0,0" BorderBrush="{x:Null}" Click="home_button_Click1" HorizontalAlignment="Left" Width="31" Height="31" VerticalAlignment="Top" ToolTip="Tilbage til hovedmenu">
+        <Label Content="CPR:" HorizontalAlignment="Left" Margin="72,72,0,0" VerticalAlignment="Top" FontWeight="Bold" Height="104" Width="114" FontSize="40"/>
+        <Label Content="Hovedmenu:" Margin="1430,72,0,0" FontSize="40" FontWeight="Normal" HorizontalAlignment="Left" Width="256" Height="70" VerticalAlignment="Top"/>
+        <Button x:Name="home_button" Cursor="Hand" Margin="1718,68,0,0" BorderBrush="{x:Null}" Click="home_button_Click1" HorizontalAlignment="Left" Width="63" Height="70" VerticalAlignment="Top" ToolTip="Tilbage til hovedmenu">
             <Button.Background>
                 <ImageBrush ImageSource="/lyric_to_home.png"/>
             </Button.Background>
         </Button>
-        <TextBox x:Name="socsec_TB" HorizontalAlignment="Left" Margin="79,38,0,0" Text="" TextWrapping="Wrap" VerticalAlignment="Top" Width="100"/>
-        <Button x:Name="STEMI_Button" Content="STEMI diagnose" Cursor="Hand" HorizontalAlignment="Left" Margin="267,30,0,0" VerticalAlignment="Top" Width="133" Height="36" FontSize="14" FontWeight="Bold" Background="#FFED1D1D" Click="STEMI_Button_Click"/>
-        <Button x:Name="NOSTEMI_Button" Content="INGEN STEMI" Cursor="Hand" HorizontalAlignment="Left" Margin="432,30,0,0" VerticalAlignment="Top" Width="126" Height="36" Background="#FF71D087" FontWeight="Bold" FontSize="14" Click="NOSTEMI_Button_Click"/>
+
+        <Button x:Name="STEMI_Button" Content="STEMI diagnose" Cursor="Hand" HorizontalAlignment="Left" Margin="607,53,0,0" VerticalAlignment="Top" Width="250" Height="108" FontSize="30" FontWeight="Bold" Background="#FFED1D1D" Click="STEMI_Button_Click"/>
+        <Button x:Name="NOSTEMI_Button" Content="INGEN STEMI" Cursor="Hand" HorizontalAlignment="Left" Margin="1092,53,0,0" VerticalAlignment="Top" Width="250" Height="108" Background="#FF71D087" FontWeight="Bold" FontSize="30" Click="NOSTEMI_Button_Click"/>
+        <Label x:Name="cpr_Lb" HorizontalAlignment="Left" Margin="191,72,0,0" VerticalAlignment="Top" FontSize="40" Width="337" Height="66"/>
 
     </Grid>
 </Window>
