@@ -26,10 +26,17 @@ namespace Presentation_Tier
          InitializeComponent();
          this.logicRef = logicRef;
          this.mainWRef = mainWRef;
+            this.PreviewKeyDown += new KeyEventHandler(HandleEsc);
 
-      }
-
-      private void login_Button_Click(object sender, RoutedEventArgs e)
+        }
+        private void HandleEsc(object sender, KeyEventArgs e)
+        {
+            if (e.Key == Key.Escape)
+            {
+                this.Close();
+            }
+        }
+        private void login_Button_Click(object sender, RoutedEventArgs e)
       {
          //sætter eventhandler til login knappen, således at hvis login er gyligt så sættes loginok til true, loginviduet lukkes og hovedmenuen åbner
          //hvis ikke login er gyldigt kommer en messagebox frem og textboksene nulstilles + cursor sættes i brugernavn_tb
